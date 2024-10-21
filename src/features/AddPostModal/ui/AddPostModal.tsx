@@ -19,11 +19,12 @@ const AddPostModal: React.FC<IAddPostModalProps> = ({
   const handleSubmit = async () => {
     try {
       setIsLoading(true);
-      await postStore.addPost({ id: Math.random(), title, body, userId: 1 });
+      const payload = { id: Math.random(), title, body, userId: 1 };
+      await postStore.addPost(payload);
       setTitle("");
       setBody("");
       setIsOpenModal(false);
-      console.log("Post added successfully");
+      console.log(`Post added successfully`);
     } catch (error) {
       console.error("Failed to add post: ", error);
     } finally {

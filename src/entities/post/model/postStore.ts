@@ -39,6 +39,9 @@ class PostStore {
           "Content-Type": "application/json; charset=UTF-8",
         },
       });
+      console.log(
+        `Post added successfully with payload: ${JSON.stringify(post)}`,
+      );
       this.posts.push(response.data);
     } catch (error) {
       console.error("Failed to add post: ", error);
