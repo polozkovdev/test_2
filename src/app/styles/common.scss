@@ -26,8 +26,8 @@ body {
 #root {
   --primary_color: #{variables.$primary_color};
   --title_weight: #{variables.$title_weight};
-  --orange: #{variables.orange};
-  --shadow: #{variables.shadow};
+  --orange: #{variables.$orange};
+  --shadow: #{variables.$shadow};
   --time_fast: #{variables.$timeFast};
   --padding: #{variables.$padding};
 
