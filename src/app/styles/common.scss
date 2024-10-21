@@ -1,0 +1,40 @@
+@use  "mixins";
+@use  "variables";
+
+html,
+body,
+#root {
+  min-height: 100vh;
+}
+
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background-color: #f8f8f8;
+  font-family: "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
+  user-select: none;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  @include mixins.fs(1.4rem, 2rem);
+}
+
+#root {
+  --primary_color: #{variables.$primary_color};
+  --title_weight: #{variables.$title_weight};
+  --time_fast: #{variables.$timeFast};
+  --padding: #{variables.$padding};
+
+  background-color: #f8f8f8;
+  font-family: "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
+  user-select: none;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  @include mixins.fs(1.4rem, 2rem);
+}

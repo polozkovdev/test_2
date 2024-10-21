@@ -1,0 +1,9 @@
+@mixin fs($fs, $lh) {
+  font-size: $fs;
+  line-height: $lh;
+}
+
+@mixin title() {
+  @include fs(1.4rem, 2rem);
+  font-weight: 700;
+}

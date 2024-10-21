@@ -1,0 +1,58 @@
+.AddPost {
+  box-shadow: 0 .2rem .4rem rgba(0, 0, 0, .1);
+  background: #fff;
+  border-radius: .2rem;
+  overflow: hidden;
+  padding: var(--padding);
+  margin-bottom: var(--padding);
+}
+
+.Content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--padding);
+}
+
+.Item {
+  position: relative;
+  flex: 1 1 auto;
+}
+
+input,
+textarea {
+  width: 100%;
+  font-size: 1.4rem;
+  padding: 0.6rem 0.8rem;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.2rem;
+  background-color: #fff;
+  color: #333;
+  transition: border-color 120ms;
+  outline: none;
+
+  &:focus,
+  &:hover {
+    border-color: orange;
+  }
+
+  &:disabled {
+    background-color: #f0f0f0;
+    color: #999;
+    cursor: not-allowed;
+  }
+
+  &::placeholder {
+    color: #999;
+    font-size: 1.2rem;
+  }
+}
+
+textarea {
+  resize: vertical;
+  min-height: 6rem;
+}
+
+input {
+  height: 2.4rem;
+}

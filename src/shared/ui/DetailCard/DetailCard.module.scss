@@ -1,0 +1,64 @@
+.DetailCard {
+  box-shadow: 0 .2rem .4rem rgba(0, 0, 0, .1);
+  background: #fff;
+  border-radius: .2rem;
+  overflow: hidden;
+}
+
+.Pick {
+  width: 100%;
+  height: 40rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+}
+
+.Content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: calc(var(--padding) / 2);;
+  gap: calc(var(--padding) / 2);
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.Title {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+
+.Desc {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+
+.Footer {
+  margin-top: auto;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: calc(var(--padding) / 2);
+  color: #999999;
+}
+
+.Link {
+  transition: 120ms;
+  padding: .4rem .6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: .2rem;
+  background-color: #fff;
+  border: .1rem solid orange;
+  color: orange;
+
+  &:hover {
+    background-color: orange;
+    color: #fff;
+  }
+}
