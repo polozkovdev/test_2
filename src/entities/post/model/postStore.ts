@@ -2,13 +2,11 @@ import { makeAutoObservable } from "mobx";
 import axios from "axios";
 import { IPost } from "@/shared/types/post";
 import { API_POSTS } from "@/shared/api/api";
-import { IUser } from "@/shared/types/user";
 import { userStore } from "@/entities/user";
 
 class PostStore {
   posts: IPost[] = [];
   post: IPost | null = null;
-  users: IUser[] = [];
   currentPage = 1;
   totalPosts = 0;
   isLoading = false;
