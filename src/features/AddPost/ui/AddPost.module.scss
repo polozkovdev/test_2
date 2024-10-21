@@ -1,0 +1,14 @@
+.AddPost {
+  position: fixed;
+  top: 10rem;
+  right: 10rem;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+}

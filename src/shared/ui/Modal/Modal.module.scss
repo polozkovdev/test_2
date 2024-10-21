@@ -1,0 +1,33 @@
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.Modal {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0.2rem;
+  max-width: 50rem;
+  width: 100%;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.Icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #333;
+}

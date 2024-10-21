@@ -1,1 +1,1 @@
-export { default as AddPost } from "./ui/AddPost";
+export { default as AddPostModal } from "./ui/AddPostModal";

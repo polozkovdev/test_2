@@ -6,6 +6,7 @@ import Card from "@/shared/ui/Card/Card";
 import SM from "./PostList.module.scss";
 
 const PostList: React.FC = observer(() => {
+  console.log("render");
   useEffect(() => {
     postStore.fetchPosts();
   }, []);
