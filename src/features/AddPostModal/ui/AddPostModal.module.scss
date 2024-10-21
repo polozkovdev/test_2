@@ -1,17 +1,7 @@
 .AddPostModal {
-  box-shadow: var(--shadow);
-  background: #fff;
-  border-radius: .2rem;
-  overflow: hidden;
-  padding: var(--padding);
-  margin-bottom: var(--padding);
-}
-
-.Content {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: var(--padding);
+  flex-direction: column;
+  gap: calc(var(--padding) / 2);
 }
 
 .Item {
@@ -24,11 +14,10 @@ textarea {
   width: 100%;
   font-size: 1.4rem;
   padding: 0.6rem 0.8rem;
-  border: 0.1rem solid #ccc;
+  border: 0.1rem solid var(--gray);;
   border-radius: 0.2rem;
   background-color: #fff;
-  color: #333;
-  transition: border-color 120ms;
+  transition: border-color var(--time_fast);
   outline: none;
 
   &:focus,
@@ -49,10 +38,15 @@ textarea {
 }
 
 textarea {
+  max-height: 50vh;
   resize: vertical;
-  min-height: 6rem;
+  min-height: 12rem;
 }
 
 input {
   height: 2.4rem;
+}
+
+.Button {
+  margin-left: auto;
 }

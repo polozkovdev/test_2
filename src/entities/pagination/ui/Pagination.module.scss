@@ -1,7 +1,14 @@
 .Pagination {
-  margin-top: var(--padding);
+  margin-top: auto;
+  padding-top: var(--padding);
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   gap: var(--padding);
+  color: var(--gray);;
+}
+
+.ActivePage {
+  color: #999;
+  text-decoration: underline;
 }

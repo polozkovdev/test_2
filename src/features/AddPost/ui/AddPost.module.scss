@@ -1,14 +1,47 @@
 .AddPost {
+  transition: var(--time_fast);
+  cursor: pointer;
   position: fixed;
-  top: 10rem;
-  right: 10rem;
-  border-radius: 50%;
+  top: 2rem;
+  right: 2rem;
+  border-radius: 2rem;
   box-shadow: var(--shadow);
-  width: 10rem;
-  height: 10rem;
+  min-width: 4rem;
+  max-width: 4rem;
+  height: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
-  font-weight: 700;
+  background: var(--white);;
+  overflow: hidden;
+
+  .Plus {
+    display: flex;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  .Text {
+    font-size: 0;
+    opacity: 0;
+    transition: opacity var(--time_fast);
+    white-space: nowrap;
+  }
+
+  &:hover {
+    box-shadow: var(--shadow-hover);
+    min-width: 12rem;
+    padding: 0 1.2rem;
+
+    .Text {
+      opacity: 1;
+      font-size: 1.4rem;
+    }
+
+    .Plus {
+      display: none;
+    }
+  }
 }
+
+

@@ -1,5 +1,5 @@
-@use  "mixins";
-@use  "variables";
+@use "mixins";
+@use "variables";
 
 html,
 body,
@@ -23,11 +23,16 @@ body {
   @include mixins.fs(1.4rem, 2rem);
 }
 
-#root {
+#root, #modal-root {
   --primary_color: #{variables.$primary_color};
   --title_weight: #{variables.$title_weight};
+
   --orange: #{variables.$orange};
+  --white: #{variables.$white};
+  --gray: #{variables.$gray};
   --shadow: #{variables.$shadow};
+  --shadow-hover: #{variables.$shadow_hover};
+
   --time_fast: #{variables.$timeFast};
   --padding: #{variables.$padding};
 

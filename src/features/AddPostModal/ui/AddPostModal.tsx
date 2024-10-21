@@ -15,38 +15,44 @@ const AddPostModal: React.FC<IAddPostModalProps> = ({
 }) => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
-
+  const [isLoading, setIsLoading] = useState(false);
   const handleSubmit = async () => {
     try {
+      setIsLoading(true);
       await postStore.addPost({ id: Math.random(), title, body, userId: 1 });
       setTitle("");
       setBody("");
+      setIsOpenModal(false);
       console.log("Post added successfully");
     } catch (error) {
       console.error("Failed to add post: ", error);
+    } finally {
+      setIsLoading(false);
     }
   };
-
+  const isDisabledSubmit =
+    title.trim().length === 0 && body.trim().length === 0;
   return (
     <Modal isOpen={isOpenModal} onClose={() => setIsOpenModal(false)}>
       <div className={SM.AddPostModal}>
         <h2 className={SM.Title}>Add New Post</h2>
-        <div className={SM.Content}>
-          <input
-            className={SM.Item}
-            type="text"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            placeholder="Title"
-          />
-          <textarea
-            className={SM.Item}
-            value={body}
-            onChange={(e) => setBody(e.target.value)}
-            placeholder="Body"
-          />
+        <input
+          className={SM.Item}
+          type="text"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          placeholder="Title"
+        />
+        <textarea
+          className={SM.Item}
+          value={body}
+          onChange={(e) => setBody(e.target.value)}
+          placeholder="Body"
+        />
+        <div className={SM.Button}>
           <Button
-            disabled={title.trim().length === 0 && body.trim().length === 0}
+            isLoading={isLoading}
+            disabled={isDisabledSubmit}
             onClick={handleSubmit}
             label="Submit"
           />

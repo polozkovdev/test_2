@@ -1,6 +1,8 @@
 import React from "react";
 import SM from "./DetailCard.module.scss";
 import { API_IMAGE_URL } from "@/shared/api/api";
+import { useNavigate } from "react-router-dom";
+import Button from "@/shared/ui/Button/Button";
 
 interface IDetailCardProps {
   name: string;
@@ -9,6 +11,11 @@ interface IDetailCardProps {
 }
 
 const DetailCard: React.FC<IDetailCardProps> = ({ name, title, body }) => {
+  const navigate = useNavigate();
+
+  const handleBackClick = () => {
+    navigate(-1);
+  };
   return (
     <article className={SM.DetailCard}>
       <div
@@ -22,6 +29,11 @@ const DetailCard: React.FC<IDetailCardProps> = ({ name, title, body }) => {
         <p className={SM.Desc}>{body}</p>
         <div className={SM.Footer}>
           <p>{name}</p>
+          <Button
+            className={SM.BackButton}
+            onClick={handleBackClick}
+            label="Back"
+          />
         </div>
       </div>
     </article>

@@ -1,6 +1,6 @@
 .DetailCard {
   box-shadow: var(--shadow);
-  background: #fff;
+  background: var(--white);
   border-radius: .2rem;
   overflow: hidden;
 }
@@ -47,18 +47,18 @@
 }
 
 .Link {
-  transition: 120ms;
+  transition: var(--time_fast);
   padding: .4rem .6rem;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: .2rem;
-  background-color: #fff;
+  background-color: var(--white);
   border: .1rem solid var(--orange);
   color: var(--orange);
 
   &:hover {
     background-color: var(--orange);
-    color: #fff;
+    color: var(--white);
   }
 }

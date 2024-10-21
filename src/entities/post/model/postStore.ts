@@ -1,8 +1,9 @@
 import { makeAutoObservable } from "mobx";
 import axios from "axios";
 import { IPost } from "@/shared/types/post";
-import { API_POSTS, API_USERS } from "@/shared/api/api";
+import { API_POSTS } from "@/shared/api/api";
 import { IUser } from "@/shared/types/user";
+import { userStore } from "@/entities/user";
 
 class PostStore {
   posts: IPost[] = [];
@@ -21,14 +22,11 @@ class PostStore {
   async fetchPosts(page: number = 1) {
     this.isLoading = true;
     try {
-      const [postRes, userRes] = await Promise.all([
-        axios.get(`${API_POSTS}?_limit=10&_page=${page}`),
-        axios.get(API_USERS),
-      ]);
+      const postRes = await axios.get(`${API_POSTS}?_limit=10&_page=${page}`);
       this.posts = postRes.data;
-      this.users = userRes.data;
       this.totalPosts = parseInt(postRes.headers["x-total-count"], 10);
       this.currentPage = page;
+      await userStore.fetchUsers();
     } catch (error) {
       console.error("Error fetching posts: ", error);
     } finally {
@@ -55,6 +53,7 @@ class PostStore {
     try {
       const response = await axios.get(`${API_POSTS}/${id}`);
       this.post = response.data;
+      await userStore.fetchUsers();
     } catch (error) {
       this.error = `Failed to fetch post by id ${id}, ${error}`;
     } finally {

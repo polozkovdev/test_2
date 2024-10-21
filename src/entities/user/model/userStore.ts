@@ -2,7 +2,7 @@ import { makeAutoObservable } from "mobx";
 import axios from "axios";
 import { IUser } from "@/shared/types/user";
 
-const API_USERS = "https://jsonplaceholder.typicode.com/users"; // URL для получения пользователей
+const API_USERS = "https://jsonplaceholder.typicode.com/users";
 
 class UserStore {
   users: IUser[] = [];
@@ -20,7 +20,7 @@ class UserStore {
       const response = await axios.get(API_USERS);
       this.users = response.data;
     } catch (error) {
-      this.error = "Failed to load users";
+      console.error("Failed to fetch users:", error);
     } finally {
       this.isLoading = false;
     }

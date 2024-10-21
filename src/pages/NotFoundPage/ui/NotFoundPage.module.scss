@@ -1,0 +1,33 @@
+.NotFoundPage {
+  text-align: center;
+  padding: 2rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.NotFoundPage h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.NotFoundPage p {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.Link {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background-color: orange;
+  color: var(--white);
+  text-decoration: none;
+  border-radius: .2rem;
+  transition: background-color var(--time_fast);
+
+  &:hover {
+    background-color: darkorange;
+  }
+}

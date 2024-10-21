@@ -30,7 +30,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
         {children}
       </div>
     </div>,
-    document.getElementById("modal-root") as HTMLElement, // Не забудьте создать элемент с id="modal-root" в index.html
+    document.getElementById("modal-root") as HTMLElement,
   );
 };
 

@@ -1,11 +1,12 @@
 .Button {
-  transition: 120ms;
+  position: relative;
+  transition: var(--time_fast);
   padding: 0.4rem 0.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 0.2rem;
-  background-color: #fff;
+  background-color: var(--white);
   border: 0.1rem solid var(--orange);
   color: var(--orange);
   cursor: pointer;
@@ -26,8 +27,19 @@
 
   &:disabled {
     background-color: #f0f0f0;
-    border-color: #ccc;
-    color: #ccc;
+    color: #999;
+    border-color: var(--gray);
     cursor: not-allowed;
   }
+}
+
+.Loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--gray);;
 }

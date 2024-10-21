@@ -12,22 +12,52 @@
 }
 
 .Modal {
-  background-color: #fff;
+  background-color: var(--white);
   padding: 2rem;
   border-radius: 0.2rem;
   max-width: 50rem;
+  max-height: calc(100% - 2rem);
   width: 100%;
   box-shadow: var(--shadow);
   position: relative;
 }
 
+button {
+  all: unset;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  line-height: inherit;
+}
+
+button:focus {
+  outline: none;
+}
+
 .Icon {
+  cursor: pointer;
+  transition: background-color var(--time_fast);
   position: absolute;
   top: 1rem;
   right: 1rem;
+  font-size: 2rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 2rem;
   background: none;
-  border: none;
-  font-size: 1.4rem;
-  cursor: pointer;
   color: #333;
+  border-radius: .2rem;
+
+  &:hover {
+    background-color: var(--gray);;
+  }
 }

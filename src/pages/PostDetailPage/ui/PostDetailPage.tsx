@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { postStore } from "@/entities/post/model/postStore";
 import DetailCard from "@/shared/ui/DetailCard/DetailCard";
 import DetailSkeleton from "@/shared/ui/DetailSkeleton/DetailSkeleton";
+import { userStore } from "@/entities/user";
 
 const PostDetailPage: React.FC = observer(() => {
   const { id } = useParams();
@@ -16,7 +17,7 @@ const PostDetailPage: React.FC = observer(() => {
     return <DetailSkeleton />;
   }
   const { userId, title, body } = postStore.post;
-  const author = postStore.users.find((user) => user.id === userId);
+  const author = userStore.users.find((user) => user.id === userId);
   return (
     <DetailCard
       title={title}
