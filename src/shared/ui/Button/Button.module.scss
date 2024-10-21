@@ -6,18 +6,17 @@
   justify-content: center;
   border-radius: 0.2rem;
   background-color: #fff;
-  border: 0.1rem solid orange;
-  color: orange;
+  border: 0.1rem solid var(--orange);
+  color: var(--orange);
   cursor: pointer;
 
   &:hover {
-    background-color: orange;
+    background-color: var(--orange);
     color: #fff;
   }
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 0.2rem rgba(255, 165, 0, 0.4);
   }
 
   &:active {

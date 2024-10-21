@@ -1,5 +1,5 @@
 .AddPost {
-  box-shadow: 0 .2rem .4rem rgba(0, 0, 0, .1);
+  box-shadow: var(--shadow);
   background: #fff;
   border-radius: .2rem;
   overflow: hidden;
@@ -33,7 +33,7 @@ textarea {
 
   &:focus,
   &:hover {
-    border-color: orange;
+    border-color: var(--orange);
   }
 
   &:disabled {

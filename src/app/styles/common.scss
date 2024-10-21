@@ -26,6 +26,8 @@ body {
 #root {
   --primary_color: #{variables.$primary_color};
   --title_weight: #{variables.$title_weight};
+  --orange: #{variables.orange};
+  --shadow: #{variables.shadow};
   --time_fast: #{variables.$timeFast};
   --padding: #{variables.$padding};
 
@@ -34,7 +36,5 @@ body {
   "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
   sans-serif;
   user-select: none;
-  font-size: 1.4rem;
-  line-height: 2rem;
   @include mixins.fs(1.4rem, 2rem);
 }
