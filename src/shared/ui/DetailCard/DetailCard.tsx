@@ -1,5 +1,6 @@
 import React from "react";
 import SM from "./DetailCard.module.scss";
+import { API_IMAGE_URL } from "@/shared/api/api";
 
 interface IDetailCardProps {
   name: string;
@@ -13,7 +14,7 @@ const DetailCard: React.FC<IDetailCardProps> = ({ name, title, body }) => {
       <div
         className={SM.Pick}
         style={{
-          backgroundImage: `url("https://picsum.photos/1500/500.jpg")`,
+          backgroundImage: `url(${API_IMAGE_URL})`,
         }}
       />
       <div className={SM.Content}>

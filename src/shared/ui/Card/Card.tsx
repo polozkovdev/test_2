@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import SM from "./Card.module.scss";
+import { API_IMAGE_URL } from "@/shared/api/api";
 
 interface ICardProps {
   id: number;
@@ -14,7 +15,9 @@ const Card: React.FC<ICardProps> = ({ id, name, title, body }) => {
     <section className={SM.Card}>
       <div
         className={SM.Pick}
-        style={{ backgroundImage: `url("https://picsum.photos/500/500.jpg")` }}
+        style={{
+          backgroundImage: `url(${API_IMAGE_URL})`,
+        }}
       />
       <div className={SM.Content}>
         <h2 className={SM.Title}>{title}</h2>
